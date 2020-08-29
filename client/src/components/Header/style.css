@@ -1,0 +1,17 @@
+/* HEADER */ 
+.header {
+    color: #fffafa;
+    font-size: 2rem;
+    text-align: center;
+    height: 30vh;
+    width: 100vw;
+    background-image: url('./books.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.content {
+    position: relative;
+    top: 28%;
+}
