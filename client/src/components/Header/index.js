@@ -1,10 +1,11 @@
+// HEADER //
 import React from 'react';
 import './style.css';
 
 const Header = () => {
     return (
-        <header className='header'>
-            <div className='content'>
+        <header className='hero'>
+            <div className='heroText'>
                 <h1>Google Books Search</h1>
             </div>
         </header>

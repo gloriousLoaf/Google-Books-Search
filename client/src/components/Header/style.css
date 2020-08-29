@@ -1,17 +1,32 @@
 /* HEADER */ 
-.header {
+.hero {
     color: #fffafa;
     font-size: 2rem;
     text-align: center;
     height: 30vh;
     width: 100vw;
-    background-image: url('./books.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), 
+        rgba(0, 0, 0, 0.1)), url('./books.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.content {
-    position: relative;
-    top: 28%;
+.heroText {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* MOBILE */ 
+@media(max-width: 575px) {
+    /* header */ 
+    .hero {
+        height: 20vh;
+        font-size: 0.8rem;
+    }
+    .heroText {
+        top: 11%;
+    }
 }
