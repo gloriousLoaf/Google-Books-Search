@@ -1,7 +1,7 @@
 // BOOK //
 import React from 'react';
 import Check from './check.png';
-import axios from "axios";
+// import API from "../../utils/API";
 import './style.css';
 
 const Book = (props) => {
@@ -19,16 +19,15 @@ const Book = (props) => {
         link: props.link,
     };
 
-
-    // WRITE API!
+    // API call  -  hmmm??
     // const saveBook = (book) => {
-    //     axios
+    //     API
     //         .post("/api/books", book)
     //         .then(() => {
 
     //         })
-    //         .catch((error) => {
-    //             console.log(error);
+    //         .catch((err) => {
+    //             console.log(err);
     //         });
     // };
 
