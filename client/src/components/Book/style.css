@@ -1,0 +1,31 @@
+/* BOOK */ 
+.bookCard {
+    margin: 1rem;
+}
+
+p, hr {
+    margin-bottom: 0.5rem;
+}
+
+.bookTitle {
+    font-weight: 700;
+}
+
+.saveBtn {
+    color: #fffafa;
+    background-color: #f72585;
+    border: none;
+    border-radius: 0.4rem;
+    padding: 0.6rem;
+}
+
+.check {
+    /* display: none; */
+    visibility: hidden;
+    margin-left: 1rem;
+    margin-bottom: -0.7rem;
+}
+
+.showCheck {
+    visibility: visible;
+}
