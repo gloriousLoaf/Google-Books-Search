@@ -1,0 +1,43 @@
+{
+  "name": "google-books-search",
+  "version": "1.0.0",
+  "description": "A MERN app to search and save results from Google Books API",
+  "main": "server.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gloriousLoaf/Google-Books-Search.git"
+  },
+  "keywords": [
+    "Google",
+    "Books",
+    "MERN",
+    "MongoDB",
+    "Express",
+    "React",
+    "Node"
+  ],
+  "author": "David Metcalf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gloriousLoaf/Google-Books-Search/issues"
+  },
+  "homepage": "https://github.com/gloriousLoaf/Google-Books-Search#readme",
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "express": "^4.17.1",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.10.2"
+  }
+}
