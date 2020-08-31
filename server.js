@@ -1,4 +1,4 @@
-// SERVER entry point for app
+// EXPRESS SERVER entry point for app //
 // dependencies
 const express = require("express");
 const mongoose = require("mongoose");
