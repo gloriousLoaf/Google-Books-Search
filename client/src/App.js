@@ -1,19 +1,25 @@
 import React from 'react';
-// import {Router as Route, Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
-import Results from './components/Results';
+import GoogleBooks from './pages/GoogleBooks';
 // import logo from './logo.svg';
 import './App.css';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <Header />
-      <Navbar />
-      <Results />
+    <div className="App" >
+      <Router>
+        <Header />
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={GoogleBooks} />
+          <Route exact path="/saved" component={GoogleBooks} />
+        </Switch>
+      </Router>
     </div>
   );
-}
+};
 
 export default App;

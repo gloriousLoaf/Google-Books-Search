@@ -3,18 +3,13 @@ import axios from "axios"
 
 export default {
     // Google Search
-    getGoogleSearchBooks: function (query) {
+    searchBooks: function (query) {
         return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + query)
     },
 
     // all books
     getBooks: function () {
-        return axios.get("/api/books");
-    },
-
-    // get book by id
-    getBook: function (id) {
-        return axios.get("/api/books/" + id);
+        return axios.get("/api/books/saved");
     },
 
     // save new book

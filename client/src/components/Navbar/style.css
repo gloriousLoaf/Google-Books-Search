@@ -5,35 +5,24 @@
     padding: 0.75rem;
 }
 
-.tagLine {
-    margin-bottom: 0.5rem;
-}
-
 .searchInput {
     padding: 0.75rem;
     border: none;
     border-radius: 0.4rem 0 0 0.4rem;
 }
 
-.searchBtn {
-    color: #fffafa;
-    background-color: #f72585;
-    border: none;
-    border-radius: 0 0.4rem 0.4rem 0;
-    padding: 0.6rem;
-}
-
-.libraryBtn {
-    color: #fffafa;
+.search, .library {
+    display: inline-block;
     background-color: #f72585;
     border: none;
     border-radius: 0.4rem;
     padding: 0.6rem;
-    margin-left: 0.75rem;
+    margin: 0 0.75rem;
 }
 
-.searchInput::placeholder {
-    color: #333;
+.btn a {
+    text-decoration: none;
+    color: #fffafa;
 }
 
 /* MOBILE */ 
@@ -45,11 +34,10 @@
         float: left;
         padding: 0.5rem 0 0.5rem 0.5rem;
     }
-    .searchBtn {
-        float: left;
+    .search {
         padding: 0.35rem;
     }
-    .libraryBtn {
+    .library {
         padding: 0.35rem;
     }
 }

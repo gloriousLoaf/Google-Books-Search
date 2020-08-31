@@ -1,0 +1,34 @@
+/* SEARCHFORM */ 
+.searchBar {
+    text-align: center;
+    margin: 1rem;
+}
+.searchInput {
+    display: inline-block;
+    padding: 0.85rem;
+    border: 1px solid #f72585;
+    border-radius: 0.4rem 0 0 0.4rem;
+}
+
+.searchInput::placeholder {
+    color: #333;
+}
+
+.searchBtn {
+    display: inline-block;
+    color: #fffafa;
+    background-color: #f72585;
+    border: none;
+    border-radius: 0 0.4rem 0.4rem 0;
+    padding: 0.75rem;
+}
+
+/* MOBILE */ 
+@media(max-width: 575px) {
+    .searchBar form {
+        display: inline-block;
+    }
+    .searchBar {
+        text-align: center;
+    }
+}
