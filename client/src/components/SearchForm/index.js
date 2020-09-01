@@ -5,7 +5,7 @@ import './style.css';
 const SearchForm = (props) => {
     return (
         <div className="searchBar">
-            <form onSubmit={props.handleFormSubmit}>
+            <form onSubmit={props.onClick}>
                 <input className="searchInput" type="text" name="searchTerm"
                     value={props.value}
                     onChange={props.onChange} placeholder="Search for a book" />

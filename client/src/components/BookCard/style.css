@@ -1,14 +1,31 @@
 /* BOOK CARD */ 
 .bookCard {
     margin: 1rem;
+    border: 1px solid;
+    border-radius: 0.25rem;
 }
 
-p, hr {
-    margin-bottom: 0.5rem;
+.bookCard p, .bookCard hr, .bookCard a, .bookCard button {
+    margin: 0.5rem;
 }
 
 .bookTitle {
     font-weight: 700;
+    padding-top: 0.75rem;
+}
+
+.bookTitle, .bookAuthor {
+    padding-left: 1rem;
+}
+
+.bookImg {
+    float: right;
+    margin: 0.75rem;
+    padding-bottom: 1rem;
+}
+
+.bookDesc {
+    padding: 2rem 0.75rem 6rem;
 }
 
 .saveBtn {

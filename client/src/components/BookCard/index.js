@@ -7,36 +7,31 @@ const BookCard = (props) => {
 
     return (
         <div className="bookCard">
-            <p className="bookTitle">
-                {props.title}
-            </p>
-            <p className="bookAuthor">
-                By {props.authors}
-            </p>
-            <hr />
-            <p className="bookDesc">
-                {props.description}
-            </p>
-            <img src={props.thumbnail} alt="book" className="bookImg"></img>
-            <a rel="noopener noreferrer" href={props.href} target="_blank">
-                Link: {props.href}
-            </a>
-            {/* return a Save or Delete button based on URL */}
-            {window.location.pathname === "/" ?
+            <div>
+                <p className="bookTitle">
+                    {props.title}
+                </p>
+                <p className="bookAuthor">
+                    By {props.authors}
+                </p>
+                <hr />
+                <div>
+                    <img src={props.thumbnail} alt="Book cover" className="bookImg"></img>
+                </div>
+                <p className="bookDesc">
+                    {props.description}
+                </p>
                 <span>
-                    <button className="btn saveBtn" data-index={props.index} type="button" onClick={props.save}>
+                    <button className="btn saveBtn" id={props.id} type="button" onClick={e => props.handleSave(e)}>
                         Save to Library
-                </button>
+                                </button>
                     {/* dynamically add check mark on button click with .showCheck ?? */}
                     <img className="check" src={Check} alt="Green check mark"></img>
                 </span>
-                :
-                <span>
-                    <button className="btn saveBtn" data-index={props.index} type="button" onClick={props.delete}>
-                        Delete from Library
-                </button>
-                </span>
-            }
+                <a rel="noopener noreferrer" href={props.href} target="_blank">
+                    View on Google Books
+                        </a>
+            </div>
         </div>
     );
 };

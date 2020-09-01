@@ -1,5 +1,4 @@
 import React from "react";
-// import ResultsContainer from '../ResultsContainer';
 import './style.css'
 
 function SearchView({ children }) {

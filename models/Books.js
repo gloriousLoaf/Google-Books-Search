@@ -17,11 +17,11 @@ const BookSchema = new Schema({
         type: String,
         required: true
     },
-    image: {
+    thumbnail: {
         type: String,
         required: true
     },
-    link: {
+    href: {
         type: String,
         required: true
     }

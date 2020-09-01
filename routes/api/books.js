@@ -3,12 +3,15 @@ const router = require("express").Router();
 const booksController = require("../../controllers/booksController");
 
 router.route("/")
-    .post(booksController.create);
-
-router.route("/saved")
+    .post(booksController.create)
     .get(booksController.findAll);
 
-router.route("/delete/:id")
+router.route("/:id")
+    .get(booksController.findById)
+    .put(booksController.update)
     .delete(booksController.remove);
+
+// router.route("/saved")
+//     .get(booksController.findAll);
 
 module.exports = router;
