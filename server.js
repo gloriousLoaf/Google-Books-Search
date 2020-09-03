@@ -19,12 +19,20 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Mongo DB / Mongoose
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/google-books-search",
-    {
-        useCreateIndex: true,
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    });
+// dev
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/google-books-search",
+//     {
+//         useCreateIndex: true,
+//         useNewUrlParser: true,
+//         useUnifiedTopology: true
+//     });
+
+// prod
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://user:qwerpoiu@cluster0.8kpt2.mongodb.net/google-books-search?retryWrites=true&w=majority', {
+    useCreateIndex: true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
 
 // Start server
 app.listen(PORT, function () {
