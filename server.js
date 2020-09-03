@@ -28,7 +28,7 @@ app.use(routes);
 //     });
 
 // prod
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://user:qwerpoiu@cluster0.8kpt2.mongodb.net/google-books-search?retryWrites=true&w=majority', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://user:qwerpoiu@cluster0.adg7r.mongodb.net/google-books-search?retryWrites=true&w=majority', {
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true
