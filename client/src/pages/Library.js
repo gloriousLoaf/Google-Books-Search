@@ -3,8 +3,8 @@ import API from "../utils/API";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import LibraryView from "../components/LibraryView";
-// import BookCard from '../components/BookCard';
-// import NoImage from './no-image.png';
+import BookCard from '../components/BookCard';
+import NoImage from './no-image.png';
 
 const Library = () => {
     const [books, setBooks] = useState([]);
@@ -41,50 +41,52 @@ const Library = () => {
                 {books.length ? (
                     books.map((book, i) => {
                         return (
-                            // <BookCard
-                            //     key={i}
-                            //     id={book._id}
-                            //     title={book.title}
-                            //     authors={book.authors}
-                            //     href={book.href}
-                            //     thumbnail={(book.thumbnail) ? (book.thumbnail) : NoImage}
-                            //     description={(book.description) ? (book.description) : ("No Desciption Available for this Title.")}
-                            //     delete={handleDelete}
-                            // />
-                            <div className="bookCard">
-                                <p className="bookTitle" key={books._id}>
-                                    {book.title}
-                                </p>
-                                <p className="bookAuthor">
-                                    By {book.authors}
-                                </p>
-                                <hr />
-                                <div>
-                                    <img src={book.thumbnail} alt="Book cover" className="bookImg"></img>
-                                </div>
-                                <p className="bookDesc">
-                                    {book.description}
-                                </p>
+                            <BookCard
+                                key={i}
+                                id={book._id}
+                                title={book.title}
+                                authors={book.authors}
+                                href={book.href}
+                                thumbnail={(book.thumbnail) ? (book.thumbnail) : NoImage}
+                                description={(book.description) ? (book.description) : ("No Desciption Available for this Title.")}
+                                delete={handleDelete}
+                            />
 
-                                {
-                                    window.location.pathname === "/" ?
-                                        <span>
-                                            <button className="btn saveBtn" type="button" onClick={book.save}>
-                                                Save to Library
-                                            </button>
-                                            {/* dynamically add check mark on button click with .showCheck ?? */}
-                                            {/* <img className="check" src={Check} alt="Green check mark"></img> */}
-                                        </span>
-                                        :
-                                        <span>
-                                            <button className="btn saveBtn" type="button" onClick={() => handleDelete(book._id)}>
-                                                Delete from Library
-                                            </button>
-                                        </span>
-                                }
-                                <a rel="noopener noreferrer" href={book.href} target="_blank">
-                                    View on Google Books</a>
-                            </div >
+                            // COMMENT THIS IN AND THE BOOKCARD OUT TO TRY WRITING DIRECTLY HERE
+                            // <div className="bookCard">
+                            //     <p className="bookTitle" key={books._id}>
+                            //         {book.title}
+                            //     </p>
+                            //     <p className="bookAuthor">
+                            //         By {book.authors}
+                            //     </p>
+                            //     <hr />
+                            //     <div>
+                            //         <img src={book.thumbnail} alt="Book cover" className="bookImg"></img>
+                            //     </div>
+                            //     <p className="bookDesc">
+                            //         {book.description}
+                            //     </p>
+
+                            //     {
+                            //         window.location.pathname === "/" ?
+                            //             <span>
+                            //                 <button className="btn saveBtn" type="button" onClick={book.save}>
+                            //                     Save to Library
+                            //                 </button>
+                            //                 {/* dynamically add check mark on button click with .showCheck ?? */}
+                            //                 {/* <img className="check" src={Check} alt="Green check mark"></img> */}
+                            //             </span>
+                            //             :
+                            //             <span>
+                            //                 <button className="btn saveBtn" type="button" onClick={() => handleDelete(book._id)}>
+                            //                     Delete from Library
+                            //                 </button>
+                            //             </span>
+                            //     }
+                            //     <a rel="noopener noreferrer" href={book.href} target="_blank">
+                            //         View on Google Books</a>
+                            // </div >
                         )
                     })
                 ) : (
