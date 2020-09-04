@@ -21,6 +21,7 @@ const Library = () => {
             .catch((err) => console.log(err));
     };
 
+    // delet handler
     const handleDelete = (e) => {
         const { id } = e.currentTarget;
         console.log(id);
@@ -34,12 +35,7 @@ const Library = () => {
             <Header />
             <Navbar />
             <LibraryView>
-                {/* map through books and fill in cards. DELETE DOES NOT WORK : (
-                    can't find any good info on how to set prop values as functions
-                    inside of .map() HOW DO YOU PASS ARGS WITHOUT MAD LOOPING??? 
-                    comment out the jsx and cooment in the BookCard to see the original
-                    setup I had. Just throughs 422 onClick, probably because no id is passed
-                    to the API. With the jsx, API returns 200 but nothing happens...*/}
+                {/* map through books and fill in cards. */}
                 {books.length ? (
                     books.map((book, i) => {
                         return (

@@ -37,12 +37,14 @@
 }
 
 .check {
-    /* display: none; */
-    visibility: hidden;
     margin-left: 1rem;
     margin-bottom: -0.7rem;
 }
 
-.showCheck {
+.hide {
+    visibility: hidden;
+}
+
+.show {
     visibility: visible;
 }

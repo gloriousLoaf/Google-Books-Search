@@ -1,3 +1,4 @@
+// SEARCHVIEW (container for BookCards)
 import React from "react";
 import './style.css'
 

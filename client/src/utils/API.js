@@ -1,12 +1,10 @@
 // API //
 import axios from "axios"
-// const URL = "https://www.googleapis.com/books/v1/volumes?q=";
-// const KEY = "&api_key=AIzaSyB-gKYFkywMwTOoY3rn1GIpbayVMOsFmYU";
+
 export default {
     // Google Search
     searchBooks: function (query) {
         return axios.get(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
-        // return axios.get(URL + query + KEY);
     },
 
     // save new book
