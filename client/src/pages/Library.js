@@ -21,7 +21,9 @@ const Library = () => {
             .catch((err) => console.log(err));
     };
 
-    const handleDelete = (id) => {
+    const handleDelete = (e) => {
+        const { id } = e.currentTarget;
+        console.log(id);
         API.deleteBook(id)
             .then((res) => getBooks())
             .catch((err) => console.log(err));
@@ -51,42 +53,6 @@ const Library = () => {
                                 description={(book.description) ? (book.description) : ("No Desciption Available for this Title.")}
                                 delete={handleDelete}
                             />
-
-                            // COMMENT THIS IN AND THE BOOKCARD OUT TO TRY WRITING DIRECTLY HERE
-                            // <div className="bookCard">
-                            //     <p className="bookTitle" key={books._id}>
-                            //         {book.title}
-                            //     </p>
-                            //     <p className="bookAuthor">
-                            //         By {book.authors}
-                            //     </p>
-                            //     <hr />
-                            //     <div>
-                            //         <img src={book.thumbnail} alt="Book cover" className="bookImg"></img>
-                            //     </div>
-                            //     <p className="bookDesc">
-                            //         {book.description}
-                            //     </p>
-
-                            //     {
-                            //         window.location.pathname === "/" ?
-                            //             <span>
-                            //                 <button className="btn saveBtn" type="button" onClick={book.save}>
-                            //                     Save to Library
-                            //                 </button>
-                            //                 {/* dynamically add check mark on button click with .showCheck ?? */}
-                            //                 {/* <img className="check" src={Check} alt="Green check mark"></img> */}
-                            //             </span>
-                            //             :
-                            //             <span>
-                            //                 <button className="btn saveBtn" type="button" onClick={() => handleDelete(book._id)}>
-                            //                     Delete from Library
-                            //                 </button>
-                            //             </span>
-                            //     }
-                            //     <a rel="noopener noreferrer" href={book.href} target="_blank">
-                            //         View on Google Books</a>
-                            // </div >
                         )
                     })
                 ) : (
@@ -98,96 +64,3 @@ const Library = () => {
 }
 
 export default Library;
-
-
-// EVEN WROTE IT AS A CLASS COMPONENT, WTF??????
-
-// import React, { Component } from "react";
-
-// class Library extends Component {
-//     state = {
-//         bookShelf: [],
-//     };
-
-//     componentDidMount() {
-//         API.getSavedBooks()
-//             .then((res) => { console.log(res); return res })
-//             .then((res) => this.setState({ bookShelf: res.data }))
-//             .catch((err) => console.log(err));
-//     }
-
-//     //delete book from bookshelf by id
-//     handleDelete = (id) => {
-//         API.deleteBook(id)
-//             .then((res) => this.componentDidMount())
-//             .catch((err) => console.log(err));
-//     };
-
-//     render() {
-//         return (
-//             <>
-//                 <Header />
-//                 <Navbar />
-//                 <LibraryView>
-//                     {this.state.bookShelf.length ? (
-//                         this.state.bookShelf.map((book, i) => {
-//                             return (
-//                                 <BookCard
-//                                     key={book._id}
-//                                     id={book._id}
-//                                     title={book.title}
-//                                     authors={book.author}
-//                                     href={book.href}
-//                                     thumbnail={(book.thumbnail) ? (book.thumbnail) : NoImage}
-//                                     description={(book.description) ? (book.description) : ("No Desciption Available for this Title.")}
-//                                     delete={this.handleDelete}
-//                                     index={i}
-//                                 />
-//                             )
-//                         })
-//                     ) : (
-//                             <h3>Nothing on your bookshelf yet.</h3>
-//                         )}
-//                 </LibraryView>
-//             </>
-//         );
-//     }
-// };
-
-// export default Library;
-
-
-//<div className="bookCard">
-// <p className="bookTitle" key={books._id}>
-//    {book.title}
-// </p>
-// <p className="bookAuthor">
-//    By {book.authors}
-//</p>
-// <hr />
-// <div>
-//     <img src={book.thumbnail} alt="Book cover" className="bookImg"></img>
-// </div>
-// <p className="bookDesc">
-//     {book.description}
-// </p>
-// 
-// {
-//     window.location.pathname === "/" ?
-//         <span>
-//             <button className="btn saveBtn" type="button" onClick={book.save}>
-//                 Save to Library
-//             </button>
-//             {/* dynamically add check mark on button click with .showCheck ?? */}
-//             {/* <img className="check" src={Check} alt="Green check mark"></img> */}
-//         </span>
-//         :
-//         <span>
-//             <button className="btn saveBtn" type="button" onClick={() => handleDelete(book._id)}>
-//                 Delete from Library
-//             </button>
-//         </span>
-// }
-// <a rel="noopener noreferrer" href={book.href} target="_blank">
-//     View on Google Books</a>
-// </div >

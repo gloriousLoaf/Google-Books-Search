@@ -11,7 +11,4 @@ router.route("/:id")
     .put(booksController.update)
     .delete(booksController.remove);
 
-// router.route("/saved")
-//     .get(booksController.findAll);
-
 module.exports = router;

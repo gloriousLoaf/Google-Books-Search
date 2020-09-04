@@ -21,18 +21,10 @@ export default {
     // get saved books for saveBook
     getSavedBooks: function () {
         return axios.get("/api/books")
-        // .then(
-        //     (response) => { console.log(response) },
-        //     (error) => { console.log(error.response) }
-        // );
     },
 
     // delete book by id
     deleteBook: function (id) {
         return axios.delete("/api/books/" + id)
-        // .then(
-        //     (response) => { console.log(response) },
-        //     (error) => { console.log(error.response) }
-        // );
     }
 }
