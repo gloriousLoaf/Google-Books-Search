@@ -37,9 +37,9 @@ This app was built to demonstrate the core usage of the **MERN** stack in a simp
 * Install a simple PWA on their mobile device to make all this happen.
 
 ## 📷 Images
-<img src="https://github.com/gloriousLoaf/Snipit-Social/blob/main/client/src/pages/search.png" alt="Google Books search results" height="300">
+<img src="https://github.com/gloriousLoaf/Google-Books-Search/blob/main/client/src/pages/search.png" alt="Google Books search results" height="325">
 <p>&nbsp;</p>
-<img src="https://github.com/gloriousLoaf/Snipit-Social/blob/main/client/src/pages/library.png" alt="Library saved from Google Books search" height="300">
+<img src="https://github.com/gloriousLoaf/Google-Books-Search/blob/main/client/src/pages/library.png" alt="Library saved from Google Books search" height="350">
 <p>&nbsp;</p>
 
 ## 📜 License
