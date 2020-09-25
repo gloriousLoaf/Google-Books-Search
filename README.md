@@ -18,7 +18,7 @@ A **MERN** stack app to query and save your next read.
 <p>&nbsp;</p>
 
 ## 📝 Description
-This full-stack app utilizes the **Google Books API** to all users to search for books by author or title. The app is built with the **MERN** stack, and uses no other frameworks. All styles are custom-built. It is **PWA** friendly and can be installed on your device if your build your own instance. The home page features a search input, and the data returned is populated into individual cards by entry. Each card will feature the author(s), title, image if available, description, link to view on Google Books, and a **Save to Library** button. Desired books can be store on the users "Bookshelf" and viewed by selecting **Your Library** from the navigation bar. In the library, books can be **Deleted** as desired.
+This full-stack app utilizes the **Google Books API** to allow users to search for books by author or title. The app is built with the **MERN** stack, and uses no other frameworks. All styles are custom-built. It is **PWA** friendly and can be installed on your device if your build your own instance. The home page features a search input, and the data returned is populated into individual cards by entry. Each card will feature the author(s), title, image if available, description, link to view on Google Books, and a **Save to Library** button. Desired books can be store on the users "Bookshelf" and viewed by selecting **Your Library** from the navigation bar. In the library, books can be **Deleted** as desired.
 <p>&nbsp;</p>
 
 ## 💾 Installation
