@@ -19,14 +19,11 @@ if (process.env.NODE_ENV === 'production') {
 app.use(routes);
 
 // MongoDB
-mongoose.connect(
-  'mongodb+srv://qwerpoiu:poiuqwer@cluster0.adg7r.mongodb.net/google-books-search?retryWrites=true&w=majority',
-  {
-    useCreateIndex: true,
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-);
+mongoose.connect(process.env.MONGODB_URI, {
+  useCreateIndex: true,
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 // Start server
 app.listen(PORT, function () {
