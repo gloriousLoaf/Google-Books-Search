@@ -48,7 +48,6 @@ const GoogleSearch = () => {
 
   const handleSave = (e) => {
     e.preventDefault();
-    console.log(e.target.id);
     // this.addCheck();
     // save book by id
     let savedBooks = results.filter((book) => book.id === e.target.id);
