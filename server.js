@@ -1,8 +1,8 @@
 // EXPRESS SERVER entry point for app //
 // dependencies
-const express = require("express");
-const mongoose = require("mongoose");
-const routes = require("./routes");
+const express = require('express');
+const mongoose = require('mongoose');
+const routes = require('./routes');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -11,30 +11,24 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Server enviroment logic, update for production
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static("client/build"));
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
 }
 
 // API routes
 app.use(routes);
 
-// Mongo DB / Mongoose
-// dev
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/google-books-search",
-//     {
-//         useCreateIndex: true,
-//         useNewUrlParser: true,
-//         useUnifiedTopology: true
-//     });
-
-// prod
-mongoose.connect('mongodb+srv://qwerpoiu:poiuqwer@cluster0.adg7r.mongodb.net/google-books-search?retryWrites=true&w=majority', {
+// MongoDB
+mongoose.connect(
+  'mongodb+srv://qwerpoiu:poiuqwer@cluster0.adg7r.mongodb.net/google-books-search?retryWrites=true&w=majority',
+  {
     useCreateIndex: true,
     useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+    useUnifiedTopology: true,
+  }
+);
 
 // Start server
 app.listen(PORT, function () {
-    console.log(`Listening on PORT ${PORT}!`);
+  console.log(`Listening on PORT ${PORT}!`);
 });

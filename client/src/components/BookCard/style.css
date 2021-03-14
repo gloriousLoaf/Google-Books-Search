@@ -1,50 +1,59 @@
-/* BOOK CARD */ 
+/* BOOK CARD */
 .bookCard {
-    margin: 1rem;
-    border: 1px solid;
-    border-radius: 0.25rem;
+  margin: 1rem;
+  border: 1px solid;
+  border-radius: 0.25rem;
 }
 
-.bookCard p, .bookCard hr, .bookCard a, .bookCard button {
-    margin: 0.5rem;
+.bookCard p,
+.bookCard hr,
+.bookCard a,
+.bookCard button {
+  margin: 0.5rem;
 }
 
 .bookTitle {
-    font-weight: 700;
-    padding-top: 0.75rem;
+  font-weight: 700;
+  padding-top: 0.75rem;
 }
 
-.bookTitle, .bookAuthor {
-    padding-left: 1rem;
+.bookTitle,
+.bookAuthor {
+  padding-left: 1rem;
+}
+
+#bookImgContainer {
+  display: flex;
+  justify-content: space-between;
 }
 
 .bookImg {
-    float: right;
-    margin: 0.75rem;
-    padding-bottom: 1rem;
+  height: max-content;
+  margin: 0.75rem;
+  padding-bottom: 1rem;
 }
 
 .bookDesc {
-    padding: 2rem 0.75rem 6rem;
+  padding: 2rem 0.75rem 6rem;
 }
 
 .saveBtn {
-    color: #fffafa;
-    background-color: #f72585;
-    border: none;
-    border-radius: 0.4rem;
-    padding: 0.6rem;
+  color: #fffafa;
+  background-color: #f72585;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.6rem;
 }
 
 .check {
-    margin-left: 1rem;
-    margin-bottom: -0.7rem;
+  margin-left: 1rem;
+  margin-bottom: -0.7rem;
 }
 
 .hide {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .show {
-    visibility: visible;
+  visibility: visible;
 }
