@@ -25,7 +25,16 @@
 #bookContainer {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  grid-template-areas: 'desc img';
   gap: 1rem;
+}
+
+#bookContainer p {
+  grid-area: desc;
+}
+
+#bookContainer img {
+  grid-area: img;
 }
 
 .bookImg {
@@ -67,8 +76,7 @@
   visibility: visible;
 }
 
-@media (max-width: 1000px) {
-  .bookImg,
+@media (max-width: 999px) {
   .saveBtn {
     margin: 0 auto;
     max-width: 30%;
@@ -79,8 +87,15 @@
   .bookCard {
     margin: 0.75rem;
   }
+  .bookTitle,
+  .bookAuthor {
+    text-align: center;
+  }
   #bookContainer {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      'img'
+      'desc';
   }
   .bookDesc {
     padding: 0.5rem;
