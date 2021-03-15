@@ -17,7 +17,6 @@ const Library = () => {
   const getBooks = () => {
     API.getSavedBooks()
       .then((res) => {
-        console.log(res);
         return res;
       })
       .then((res) => setBooks(res.data))
@@ -37,7 +36,6 @@ const Library = () => {
       <Header />
       <Navbar />
       <LibraryView>
-        {/* map through books and fill in cards. */}
         {books.length ? (
           books.map((book, i) => {
             return (
@@ -58,7 +56,7 @@ const Library = () => {
             );
           })
         ) : (
-          <h3>Nothing on your bookshelf yet.</h3>
+          <h3 className='noBooks'>Nothing on your bookshelf yet.</h3>
         )}
       </LibraryView>
     </>

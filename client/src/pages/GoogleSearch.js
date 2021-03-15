@@ -15,16 +15,13 @@ const GoogleSearch = () => {
     setBookSearch(e.target.value);
   };
 
-  // submit search handler
   const handleSearch = (e) => {
     e.preventDefault();
-    // API call
     API.searchBooks(bookSearch)
       .then((res) => {
         if (res.data.items === 'error') {
           throw new Error(res.data.items);
         } else {
-          // map over results array
           let searchResult = res.data.items;
           searchResult = searchResult.map((book) => {
             book = {
@@ -39,7 +36,6 @@ const GoogleSearch = () => {
             };
             return book;
           });
-          // empty state
           setResults(searchResult);
         }
       })
@@ -48,8 +44,6 @@ const GoogleSearch = () => {
 
   const handleSave = (e) => {
     e.preventDefault();
-    // this.addCheck();
-    // save book by id
     let savedBooks = results.filter((book) => book.id === e.target.id);
     savedBooks = savedBooks[0];
     API.saveBook(savedBooks)
@@ -103,7 +97,7 @@ const GoogleSearch = () => {
             );
           })
         ) : (
-          <h3>No Results to Display</h3>
+          <h3 className='noBooks'>No Results to Display</h3>
         )}
       </SearchView>
     </>
